@@ -1,0 +1,333 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+
+\definecolor{mygreen}{RGB}{126, 235, 207}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\thepage}
+\rfoot{Angel Daniel Cruz Flores}
+\rhead{\leftmark}
+
+
+\title{Modelando al Universo}
+\author{Angel Daniel Cruz Flores}
+\date{October 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+En este pequeño formulario se abordarán algunas (en realidad muy pocas) fórmulas usadas en la carrera de ciencias físico matemático, las cuales nos ayudan a modelar al universo.
+
+\newpage
+
+\section{Cálculo}
+
+    \begin{itemize}\renewcommand{\labelitemi}{$\vartheta$}
+    
+         \item \textbf{Definición de Derivada:} La derivada es el resultado de un límite y representa la pendiente de la recta tangente a la gráfica de la función en un punto. Es el límite cuando el intervalo se hace infinitamente pequeño de la tasa de variación media.\\
+         
+         
+        
+            \begin{equation*}
+                \textcolor {mygreen}{f'(x) = \lim\limits_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h}}
+            \end{equation*}\\
+
+            
+        \item \textbf{Gradiente de una función $\phi (\Vec{x})$ en coordenadas cartesianas $\Vec{\nabla} \phi (\Vec{x})$:} Es la generalización multivariable de la derivada de una función. Mide la tasa de cambio de la función $f$ en cada una de las tres direcciones cartesianas $x, y, z$. \\
+        
+            \begin{equation*}
+                \Vec{\nabla} \phi (\Vec{x}) = \left( \frac{\partial}{\partial x} \phi (\Vec{x}), \frac{\partial}{\partial y} \phi (\Vec{x}), \frac{\partial}{\partial z} \phi (\Vec{x}) \right) = \frac{\partial}{\partial x} \phi (\Vec{x}) \hat{i} \thinspace + \thinspace \frac{\partial}{\partial y} \phi (\Vec{x}) \hat{j} \thinspace + \thinspace \frac{\partial}{\partial z} \phi (\Vec{x}) \hat{k}
+            \end{equation*}\\
+            
+         \item \textbf{Derivación bajo el signo integral - Truco de Feynman/Regla de Leibniz:} La diferenciación bajo el signo integral es una operación del cálculo, utilizada para evaluar ciertas integrales. En su forma más simple, llamada la regla integral de Leibniz, se aplica según la siguiente ecuación: \\
+        
+            \begin{equation*}
+                \frac{d}{dx} \int\limits_{a}^{b} f(x,t) \thinspace dt \thinspace = \int\limits_{a}^{b} \frac{\partial f \thinspace (x,t)}{\partial x} \thinspace dt
+            \end{equation*}\\
+            
+        Forma general: La forma más general de diferenciación bajo el signo integral establece que: si $f(x, t)$ es una función continua y diferenciable (es decir, las derivadas parciales existen y son continuas) y los límites de integración $a(x)$ y $b(x)$ son también funciones continuas y diferenciables de $x$, entonces se cumple:
+        
+            \begin{equation*}
+                \frac{d}{dx} \int\limits_{a(x)}^{b(x)} f(x,t) \thinspace dt \thinspace = \int\limits_{a(x)}^{b(x)} \frac{\partial f \thinspace (x,t)}{\partial x} \thinspace dt \thinspace + \thinspace f(x,b(x)) \thinspace \frac{d \thinspace b(x)}{dx} \thinspace - \thinspace f(x,a(x)) \frac{d \thinspace a(x)}{dx}
+            \end{equation*}\\
+            
+        \item \textbf{Función exponencial:} La función exponencial, es conocida formalmente como la función real $e^{x}$, donde $e$ es el número de Euler, aproximadamente 2.71828.; esta función tiene por dominio de definición el conjunto de los números reales, y tiene la particularidad de que su derivada es la misma función.  \\
+        
+            \begin{equation*}
+                e^{x} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + ... \frac{x^n}{n!} \hspace{1 cm} n \rightarrow \infty
+            \end{equation*}\\    
+            
+        En forma resumida: 
+        
+            \begin{equation*}
+                e^{x} = \sum\limits_{n=0}^{\infty} \frac{x^n}{n!}
+            \end{equation*}\\  
+            
+        Donde n! es el "factorial de n", que es el producto: 
+        
+            \begin{equation*}
+                n! = x \times (n-1) \times (n-2) \times ... \times 1 
+            \end{equation*}\\  
+            
+        \item \textbf{Tansformada de Fourier:} La transformada de Fourier, denominada así por Joseph Fourier, es una transformación matemática empleada para transformar señales entre el dominio del tiempo (o espacial) y el dominio de la frecuencia, que tiene muchas aplicaciones en la física y la ingeniería. Es reversible, siendo capaz de transformarse en cualquiera de los dominios al otro. El propio término se refiere tanto a la operación de transformación como a la función que produce. \\
+        
+            \begin{equation*}
+                F(w)= \int\limits_{-\infty}^{\infty} \thinspace f(t)e^{-iwt} dt
+            \end{equation*}\\
+            
+        \item Tansformada inversa de Fourier: \\
+        
+            \begin{equation*}
+                f(t) = \frac{1}{2 \pi} \int\limits_{-\infty}^{\infty} F(w)e^{iwt} dw
+            \end{equation*}\\
+    
+    \end{itemize}
+    
+    \newpage
+
+\section{Trigonometría}
+
+    \subsection{Razones trigonométricas}
+    
+    \begin{itemize}\renewcommand{\labelitemi}{$\varphi$}
+    
+        \item \textbf{Coseno:} En un triángulo rectángulo, es la longitud del lado adyacente dividida por la longitud de la hipotenusa.\\
+        
+            \begin{equation*}
+                cos(\alpha)=\frac{cat.\thinspace adyacente}{hipotenusa}
+            \end{equation*}\\
+        
+         \item \textbf{Seno:}\\
+        
+            \begin{equation*}
+                sen(\alpha)=\frac{cat.\thinspace opuesto}{hipotenusa}
+            \end{equation*}
+            
+        \item \textbf{Tangente:}\\
+        
+            \begin{equation*}
+                tan(\alpha)=\frac{cat.\thinspace opuesto}{cat.\thinspace adyacente}
+            \end{equation*}
+            
+            \begin{equation*}
+                tan(\alpha)=\frac{sen\thinspace \alpha}{cos\thinspace \alpha}
+            \end{equation*}\\
+            
+        \item \textbf{Ley de Senos:} Establece la relación de proporcionalidad existente entre las longitudes de lados de un triángulo cualquiera con los senos de sus ángulos interiores opuestos. Cada lado de un triángulo es directamente proporcional al seno del ángulo opuesto.\\
+        
+            \begin{equation*}
+                \textcolor{mygreen}{\frac{a}{sen\thinspace \alpha}=\frac{b}{sen\thinspace \beta}=\frac{c}{sen\thinspace \gamma}}
+            \end{equation*}\\
+            
+        \item \textbf{Ley de Cosenos:} Es una generalización del teorema de Pitágoras en los triángulos rectángulos en trigonometría. Establece que el cuadrado de la longitud de cualquier lado de un triángulo oblicuángulo es igual a la suma de los cuadrados de las longitudes de los otros dos lados, menos el doble producto de las longitudes de los mismos lados por el coseno del ángulo que los une.\\
+        
+            \begin{equation*}
+                c^2=a^2+b^2-2ab\thinspace cos(\theta)
+            \end{equation*}\\
+            
+        \item \textbf{Fórmula de Heron:} La fórmula de Herón se distingue de otras fórmulas para hallar el área de un triángulo, como la de la mitad de la base por la altura o la de la mitad del módulo de un producto cruz de dos lados, por no requerir ninguna elección arbitraria de un lado como base o un vértice como origen. \\
+        
+            \begin{equation*}
+                A = \sqrt{s(s-a)(s-b)(s-c)}
+            \end{equation*}\\
+    
+    \end{itemize}
+    
+    \newpage
+        
+    
+\section{Física}
+
+    \begin{itemize}\renewcommand{\labelitemi}{$\infty$}
+    
+        \item \textbf{Ecuación de Campo de la Relatividad General:} En física, las ecuaciones de campo de Einstein, ecuaciones de Einstein o ecuaciones de Einstein-Hilbert (conocidas como EFE, por Einstein field equations) son un conjunto de diez ecuaciones de la teoría de la relatividad general de Albert Einstein que describen la interacción fundamental de la gravitación como resultado de que el espacio-tiempo está siendo curvado por la materia y la energía. \\
+        
+            \begin{equation*}
+                \textcolor{mygreen}{G_{\mu \nu} = R_{\mu \nu} - \frac{1}{2}R\thinspace g_{\mu \nu} = \frac{8\pi G}{c^4}T_{\mu \nu}}
+            \end{equation*}\\
+            
+        \item '\textbf{Ecuación de Schrödinger:} Se trata de una ecuación de onda en términos de la función de onda, que predice analíticamente y con precisión, la probabilidad de eventos o resultados. El resultado detallado no está estrictamente determinado, pero dado un gran número de eventos, la ecuación de Schrodinger predice la distribución de los resultados. \\
+        
+            \begin{equation*}
+                i\hslash \thinspace \frac{\partial}{\partial t} \thinspace \psi \thinspace (r, t) = \left[\frac{-\hslash ^2}{2 \mu} \nabla ^2 + V \thinspace (r, t)\right] \thinspace \psi \thinspace (r, t)
+            \end{equation*}\\
+            
+        \item \textbf{Ecuaciones de Maxwell:} Las ecuaciones de Maxwell representan una de las formas mas elegantes y concisas de establecer los fundamentos de la Electricidad y el Magnetismo. A partir de ellas, se pueden desarrollar la mayoría de las fórmulas de trabajo en el campo. \\
+        
+            \begin{equation}
+                \nabla \times \Vec{E} = - \frac{\partial \Vec{B}}{\partial t}
+            \end{equation}\\
+            
+            \begin{equation}
+                \nabla \cdot \Vec{E} = \frac{\rho}{\varepsilon_{0}}
+            \end{equation}\\
+            
+            \begin{equation}
+                \nabla \times \Vec{E} = \mu _{0} \thinspace \varepsilon _{0} \frac{\partial \Vec{E}}{\partial t} + \mu _{0} \Vec{J}
+            \end{equation}\\
+            
+            \begin{equation}
+                \nabla \cdot \Vec{B} = 0
+            \end{equation}\\
+            
+        \item \textbf{Ecuación de Navier-Stokes:} En física, las ecuaciones de Navier-Stokes son un conjunto de ecuaciones en derivadas parciales no lineales que describen el movimiento de un fluido viscoso, nombradas así en honor al ingeniero y físico francés Claude-Louis Navier y al físico y matemático anglo irlandés George Gabriel Stokes. \\
+        
+            \begin{equation*}
+                \rho \left(\frac{\partial \Vec{V}}{\partial t} + V \cdot \nabla V \right) = \nabla P + p \Vec{g} + \mu \nabla ^2 \Vec{V}
+            \end{equation*}\\
+            
+        \item \textbf{Ley de Faraday:} Relaciona el campo $\Vec{E}$ con la variación del campo $\Vec{B}$.\\
+        La circulación del campo $\Vec{E}$ a lo largo de un contorno $C$ es igual a la menos derivada con respecto al timepo del flujo del campo $\Vec{B}$ a través de una de las superficies limitadas por $C$.
+        
+            \begin{equation*}
+                \oint_{C} \Vec{E} \cdot d \Vec{l} = -\frac{\partial}{\partial t} \int \int_{S} \Vec{B} \cdot d \Vec{S} 
+            \end{equation*}\\
+            
+        \item \textbf{Radiación de Hawking:} La radiación de Hawking es una radiación teóricamente producida cerca del horizonte de sucesos de un agujero negro y debida plenamente a efectos de tipo cuántico.  \\
+        
+            \begin{equation*}
+                T_{H} = \frac{\hslash c^{3}}{8 \pi Gk_{B}M}
+            \end{equation*}\\
+            
+        \item \textbf{Ecuación de Bolzmann:} En física, específicamente en física estadística fuera del equilibrio, la ecuación de Boltzmann describe el comportamiento estadístico de un sistema termodinámico fuera del equilibrio termodinámico. \\
+        
+            \begin{equation*}
+                \frac{\partial f}{\partial t} \thinspace + \thinspace \frac{p}{m} \cdot \nabla f \thinspace + \thinspace F \cdot \frac{\partial f}{\partial p} = \left( \frac{\partial f}{\partial t} \right) _{coll}
+            \end{equation*}\\
+            
+        \item \textbf{Ecuaciones de Lagrange:} Las ecuaciones de Lagrange son un conjunto de ecuaciones que nos permiten conocer la ecuación diferencial del movimiento de las coordenadas libres que estemos estudiando. Tendremos un número de ecuaciones igual al número de grados de libertad. \\
+        
+            \begin{equation*}
+                \frac{d}{dt} \left( \frac{\partial Ec}{\partial \dot{q}_{k} } \right) - \thinspace \frac{\partial Ec}{\partial q_{k}} \thinspace + \thinspace \frac{\partial V}{\partial q_{k}} \thinspace + \thinspace \frac{\partial D}{\partial \dot{q}_{k}} = Q_{k}
+            \end{equation*}\\
+            
+        \item \textbf{Ecuación de Euler-Lagrange:} Las ecuaciones de Euler-Lagrange son las condiciones bajo las cuales cierto tipo de problema variacional alcanza un extremo. Aparecen sobre todo en el contexto de la mecánica clásica en relación con el principio de mínima acción, también aparecen en teoría clásica de campos (electromagnetismo y teoría general de la relatividad) y sirve de base para la formulación de integrales de camino para la teoría cuántica de campos. \\
+        
+            \begin{equation*}
+                \frac{\partial \mathcal{L}}{\partial q_{i}} \thinspace - \thinspace \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}_{i}} \right) = 0
+            \end{equation*}\\
+            
+    \end{itemize}
+    
+    \newpage
+    
+\section{Geometría}
+
+    \begin{itemize}\renewcommand{\labelitemi}{$\chi$}
+    
+        \item \textbf{Distancia entre dos puntos:} La distancia entre dos puntos de dimensión R en el espacio es la aplicación de la raíz cuadrada al vector que forman esos puntos ordenados. En otras palabras, la distancia entre dos puntos en el espacio es el módulo del vector formado por dichos puntos. \\
+        
+        Sean  $A=(a_{1}, a_{2}, ... , a_{n}) $ y $B=(b_{1}, b_{2}, ... , b_{n}) $ dos puntos del espacio euclídeo n-dimensional, la distancia entre ambos puntos se define como: 
+        
+            \begin{equation*}
+                \textcolor{mygreen}{d_{A, B} = \sqrt{(a_{1}- b_{1})^2 + (a_{2}- b_{2})^2 + ... + (a_{n}- b_{n})^2} = \sqrt{\sum\limits_{i=1}^{n}(a_{i}- b_{i})^2}}
+            \end{equation*}\\
+            
+        \item \textbf{Punto medio de un segmento AB:} El punto medio de un segmento representa al punto que se ubica exactamente en la mitad de los dos puntos extremos del segmento. El punto medio puede ser encontrado al dividir a la suma de las coordenadas x por 2 y dividir a la suma de las coordenadas y por 2. \\
+        
+        Sean $A=(x_{1}, y_{1})$ y $B=(x_{2}, y_{2}$ dos puntos en el plano cortesiano, entonces las coordenadas del punto medio del segmento AB son: 
+        
+            \begin{equation*}
+                M = \left( \frac{x_{1} \thinspace + \thinspace x_{2}}{2}, \thinspace \frac{x_{2} \thinspace + \thinspace y_{2}}{2} \right)
+            \end{equation*}\\
+            
+        \item \textbf{Ecuación de la parabola:} La ecuación de la parábola depende de si el eje es vertical u horizontal. Si el eje es vertical, la y será la variable dependiente y tendrá un término en $x^{2}$. Si el eje es horizontal, será $x$ la variable dependiente y tendrá un término en $y^{2}$. \\
+        
+        Forma Ordinaria: 
+        
+            \begin{equation*}
+                (x-h)^{2} = 4p(y-k)
+            \end{equation*}
+            
+            \begin{equation*}
+                (x-h)^{2} = -4p(y-k)
+            \end{equation*}
+            
+            \begin{equation*}
+                (y-k)^{2} = 4p(x-h)
+            \end{equation*}
+            
+            \begin{equation*}
+                (y-k)^{2} = 4p(x-h)
+            \end{equation*}
+            
+        Forma General:
+        
+            \begin{equation*}
+                Cy^{2} \pm Dx \pm Ey \pm F = 0
+            \end{equation*}
+            
+            \begin{equation*}
+                Ax^{2} \pm Dx \pm Ey \pm F = 0
+            \end{equation*}
+            
+        \item \textbf{Área de un polígono de cinco vértices $ABCDE$ a través del uso de determinantes:} Para calcular el área de un polígono cualquiera, se puede hacer un determinante de la siguiente forma: colocamos las coordenadas de los puntos (vértices de la figura) alineados en una columna, repitiendo el primero que hemos tomado en la parte inferior, por ejemplo, en la figura tomamos las coordenadas de los tres puntos\\
+        
+            \begin{equation*}
+            A_{ABCDE} = \frac{1}{2}
+                \begin{vmatrix}
+                    1 & x_{1} & y_{1}\\
+                    1 & x_{2} & y_{2}\\
+                    1 & x_{3} & y_{3}\\
+                \end{vmatrix}
+            \thinspace + \frac{1}{2}
+                \begin{vmatrix}
+                    1 & x_{1} & y_{1}\\
+                    1 & x_{3} & y_{3}\\
+                    1 & x_{4} & y_{4}\\
+                \end{vmatrix}
+            \thinspace + \frac{1}{2}
+                \begin{vmatrix}
+                    1 & x_{1} & y_{1}\\
+                    1 & x_{4} & y_{4}\\
+                    1 & x_{5} & y_{5}\\
+                \end{vmatrix}
+            \end{equation*}\\
+            
+    \end{itemize}
+    
+    \newpage
+            
+\section{Geometría Diferencial}
+
+    \begin{itemize}\renewcommand{\labelitemi}{$\otimes$}
+            
+        \item \textbf{Longitud de un arco de curva:} La longitud de arco es la medida de la distancia o camino recorrido a lo largo de una curva o dimensión lineal. Las primeras mediciones se hicieron posibles a través de aproximaciones trazando un polígono dentro de la curva y calculando la longitud de los lados de éste para obtener un valor aproximado de la longitud de la curva. Mientras se usaban más segmentos, disminuyendo la longitud de cada uno, se obtenía una aproximación cada vez mejor.  \\
+        
+        Sea la curva $r=r\overline{(\lambda)}$ para $\lambda_{0}, \lambda \in [\lambda_{1}, \lambda_{2}]$, la longitud del arco de curva entre los puntos correspondientes a los valores $\lambda_{0}$ y $\lambda$ del parámetro es:
+        
+            \begin{equation*}
+                s = \int\limits_{\lambda_{0}}^{\lambda} \sqrt{\overline{r'(\lambda)} \cdot \overline{r'(\lambda)} d\lambda} = \int\limits_{\lambda_{0}}^{\lambda} \sqrt{(x'(\lambda))^{2} \thinspace + \thinspace (y'(\lambda))^{2} \thinspace + \thinspace (z'(\lambda))^{2} \thinspace d\lambda}
+            \end{equation*}\\
+            
+        \item \textbf{Longitud de una curva:} Es la medida de la distancia o camino recorrido a lo largo de una curva o dimensión lineal.\\
+        
+        Sea $\alpha : I = [a,b] \rightarrow \mathds{R}$ una curva regular. Se llama longitud de $\alpha$ a:
+        
+            \begin{equation*}
+                \textcolor{mygreen}{L(\alpha) = \int_{a}^{b} \arrowvert \alpha '(t) \arrowvert \thinspace dt = \int_{a}^{b} \sqrt{\left( \frac{dx}{dt} \right)^{2} \thinspace + \thinspace \left( \frac{dy}{dt} \right)^{2} dt }}
+            \end{equation*}\\
+            
+    \end{itemize}
+
+
+
+\end{document}
